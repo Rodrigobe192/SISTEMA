@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica Neue, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('light-blue-and-yellow-gradient-background-free-vector.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: #EEEEEE;
+    z-index: 1;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #2E2E2E;
+    margin-bottom: 25px;
+}
+
+label, p {
+    font-size: 1em;
+    color: #575757;
+    margin-bottom: 10px;
+}
+
+input, select {
+    padding: 17px 11px;
+    border: 1px solid #00ADEF;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    background-color: #FAFAFC;
+    outline: none;
+    color: #000000;
+    font-size: 1em;
+    width: 100%;
+}
+
+.btn-1 {
+    background-color: #00ADEF;
+    font-size: 1em;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.btn-1:hover {
+    background-color: #04b8ff;
+}
+
+#mensaje-exito {
+    position: fixed; /* Hace que el mensaje esté flotante */
+    top: 20px; /* Lo coloca a 20px desde la parte superior */
+    left: 50%; /* Lo centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta el mensaje para que esté perfectamente centrado */
+    background-color: #d4edda;  /* Fondo verde claro */
+    color: #155724;              /* Texto verde oscuro */
+    border: 1px solid #c3e6cb;   /* Borde verde */
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    width: auto;
+    z-index: 1000; /* Asegura que se superponga sobre otros elementos */
+    display: none; /* Lo mantiene oculto por defecto */
+}
+
+#informe-detalles {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+    body {
+        padding: 30px;
+    }
+
+    form {
+        width: 100%;
+    }
+}

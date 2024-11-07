@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerrar Proyecto Aprobado</title>
+    <link rel="stylesheet" href="ProyectoCe.css">
+    <script src="Cerrar.js" defer></script> <!-- Enlazamos el archivo JS -->
+</head>
+<body>
+    <form id="form-cerrar-proyecto">
+        <h2>Cerrar Proyecto Aprobado</h2>
+
+        <label for="id-proyecto">ID del Proyecto</label>
+        <input type="text" id="id-proyecto" required>
+
+        <label for="comentarios">Comentarios (Opcional)</label>
+        <textarea id="comentarios" rows="4"></textarea>
+
+        <input type="submit" class="btn-1" value="Cerrar Proyecto">
+    </form>
+
+    <div id="mensaje-exito" style="display:none; text-align: center; color: green; margin-top: 20px;">
+        <h3>Proyecto Cerrado Correctamente</h3>
+    </div>
+</body>
+</html>

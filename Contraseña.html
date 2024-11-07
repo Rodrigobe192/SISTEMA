@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para el mensaje flotante */
+        .mensaje-exito {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            z-index: 9999;
+            border-radius: 5px;
+        }
+
+        /* Estilo general para el cuerpo y el fondo */
+        body {
+            font-family: Helvetica Neue, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('desktop-wallpaper-backgrounds-for-login-page-login-page.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Formulario de cambio de contraseña */
+        form {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            background-color: #EEEEEE;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            text-transform: uppercase;
+            color: #2E2E2E;
+            margin-bottom: 25px;
+        }
+
+        label, p {
+            font-size: 17px;
+            color: #575757;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 17px 11px;
+            border: 1px solid #00ADEF;
+            border-radius: 25px;
+            margin-bottom: 25px;
+            background-color: #FAFAFC;
+            outline: none;
+            color: #00ADEF;
+            font-size: 17px;
+        }
+
+        .btn-1 {
+            background-color: #00ADEF;
+            font-size: 15px;
+            color: #ffffff;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .btn-1:hover {
+            background-color: #04b8ff;
+        }
+
+        .remember {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        @media(max-width:991px) {
+            body {
+                padding: 30px;
+            }
+
+            form {
+                width: 100px;
+            }
+
+            .remember {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mensaje de éxito que aparecerá en la parte superior -->
+    <div id="mensajeExito" class="mensaje-exito">
+        Cambio de Contraseña Correcto
+    </div>
+
+    <!-- Formulario de cambiar contraseña -->
+    <form action="#" method="POST" onsubmit="return cambiarContraseña();">
+        <h2>Cambiar Contraseña</h2>
+
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <label for="contraseña">Nueva Contraseña</label>
+        <input type="password" id="contraseña" name="contraseña" required>
+
+        <label for="confirmar">Confirmar Contraseña</label>
+        <input type="password" id="confirmar" name="confirmar" required>
+
+        <input type="submit" class="btn-1" value="Cambiar Contraseña">
+    </form>
+
+    <script>
+        // Función para mostrar el mensaje flotante en la parte superior
+        function mostrarMensajeExito() {
+            var mensaje = document.getElementById('mensajeExito');
+            mensaje.style.display = 'block'; // Mostrar el mensaje
+            setTimeout(function() {
+                mensaje.style.display = 'none'; // Ocultar el mensaje después de 3 segundos
+            }, 3000);
+        }
+
+        // Función para validar y simular el cambio de contraseña
+        function cambiarContraseña() {
+            var contraseña = document.getElementById("contraseña").value;
+            var confirmar = document.getElementById("confirmar").value;
+
+            // Validar que las contraseñas coincidan
+            if (contraseña === confirmar) {
+                mostrarMensajeExito(); // Mostrar mensaje de éxito
+                return false; // Prevenir el envío real del formulario para demostración
+            } else {
+                alert("Las contraseñas no coinciden.");
+                return false; // No enviar el formulario si las contraseñas no coinciden
+            }
+        }
+    </script>
+
+</body>
+</html>

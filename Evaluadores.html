@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluadores Asignados</title>
+    <link rel="stylesheet" href="Evaluador.css">
+    <script src="Eva.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Asignar Evaluadores</h1>
+
+        <!-- Formulario para Asignar Evaluadores -->
+        <section id="asignar-evaluadores">
+            <form id="form-asignar-evaluadores">
+                <h2>Asignar Evaluadores al Proyecto</h2>
+
+                <!-- Campo: Nombre del Proyecto -->
+                <label for="nombre-proyecto">Nombre del Proyecto</label>
+                <input type="text" id="nombre-proyecto" placeholder="Nombre del Proyecto" required>
+
+                <!-- Campo: Evaluador -->
+                <label for="evaluador">Seleccionar Evaluador</label>
+                <select id="evaluador" required>
+                    <option value="evaluador1">Evaluador 1</option>
+                    <option value="evaluador2">Evaluador 2</option>
+                    <option value="evaluador3">Evaluador 3</option>
+                    <option value="evaluador4">Evaluador 4</option>
+                    <!-- Aquí puedes agregar más evaluadores -->
+                </select>
+
+                <!-- Campo: Carga de Trabajo -->
+                <label for="carga-trabajo">Carga de Trabajo</label>
+                <select id="carga-trabajo" required>
+                    <option value="alta">Alta</option>
+                    <option value="media">Media</option>
+                    <option value="baja">Baja</option>
+                </select>
+
+                <!-- Campo: Especialización -->
+                <label for="especializacion">Especialización</label>
+                <select id="especializacion" required>
+                    <option value="tecnica">Técnica</option>
+                    <option value="social">Social</option>
+                    <option value="economica">Económica</option>
+                    <!-- Puedes agregar más especializaciones -->
+                </select>
+
+                <!-- Campo: Disponibilidad -->
+                <label for="disponibilidad">Disponibilidad</label>
+                <select id="disponibilidad" required>
+                    <option value="disponible">Disponible</option>
+                    <option value="ocupado">Ocupado</option>
+                </select>
+
+                <!-- Botón para Asignar Evaluador -->
+                <input type="submit" class="btn-1" value="Asignar Evaluador">
+            </form>
+
+            <!-- Mensaje de Éxito -->
+            <div id="mensaje-asignacion" style="display:none; text-align: center; color: green;">
+                <h3>Evaluador Asignado Correctamente</h3>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

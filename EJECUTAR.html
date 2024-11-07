@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="Iniciar.html" method="get">
+        <h2>Iniciar Sesión</h2>
+
+        <label for="Usuario">Usuario</label>
+        <input type="text" id="Usuario" name="Usuario" required>
+
+        <label for="Contraseña">Contraseña</label>
+        <input type="password" id="Contraseña" name="Contraseña" required>
+
+        <div class="remember">
+            <!-- Enlace para recordar usuario -->
+            <a href="javascript:void(0)" onclick="recordarUsuario()">Recordar</a>
+            <!-- Enlace para olvidé la contraseña -->
+            <a href="Contraseña.html">Olvidé Contraseña</a>
+        </div>
+
+        <input type="submit" class="btn-1" value="Iniciar">
+    </form>
+
+    <script>
+        function recordarUsuario() {
+            // Puedes agregar aquí cualquier acción para recordar al usuario, por ejemplo:
+            let usuario = document.getElementById("Usuario").value;
+            if(usuario) {
+                alert("El usuario " + usuario + " ha sido registrado para recordar.");
+            } else {
+                alert("Por favor ingrese su usuario.");
+            }
+        }
+    </script>
+</body>
+</html>

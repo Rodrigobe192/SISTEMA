@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitorear Progreso del Proyecto</title>
+    <link rel="stylesheet" href="Monitor.css">
+    <script src="Moni.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Monitorear Progreso del Proyecto</h1>
+
+        <!-- Formulario para Monitorear Progreso -->
+        <section id="monitorear-progreso">
+            <form id="form-monitorear-progreso">
+                <h2>Verificar el Progreso de tu Proyecto</h2>
+
+                <!-- Campo: Nombre del Proyecto -->
+                <label for="nombre-proyecto">Nombre del Proyecto</label>
+                <input type="text" id="nombre-proyecto" placeholder="Nombre del Proyecto" required>
+
+                <!-- Campo: Estado del Proyecto -->
+                <label for="estado-proyecto">Estado del Proyecto</label>
+                <select id="estado-proyecto" required>
+                    <option value="registrado">Registrado</option>
+                    <option value="en-evaluacion">En Evaluación</option>
+                    <option value="aprobado">Aprobado</option>
+                    <option value="en-ejecucion">En Ejecución</option>
+                    <option value="finalizado">Finalizado</option>
+                </select>
+
+                <!-- Campo: Fecha de Inicio -->
+                <label for="fecha-inicio">Fecha de Inicio</label>
+                <input type="date" id="fecha-inicio" required>
+
+                <!-- Campo: Fecha Estimada de Finalización -->
+                <label for="fecha-finalizacion">Fecha Estimada de Finalización</label>
+                <input type="date" id="fecha-finalizacion" required>
+
+                <!-- Campo: Actualización del Proyecto -->
+                <label for="actualizacion">Actualizar Estado del Proyecto</label>
+                <textarea id="actualizacion" placeholder="Detalles sobre el progreso del proyecto" rows="5" required></textarea>
+
+                <!-- Botón para Monitorear Progreso -->
+                <input type="submit" class="btn-1" value="Actualizar Progreso">
+            </form>
+
+            <!-- Mensaje de Éxito -->
+            <div id="mensaje-progreso" style="display:none; text-align: center; color: green;">
+                <h3>Progreso del Proyecto Actualizado Correctamente</h3>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

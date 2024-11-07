@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificar Resultado al Proponente</title>
+    <link rel="stylesheet" href="Notifiador.css">
+    <script src="Noti.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Notificar Resultado al Proponente</h1>
+
+        <!-- Formulario para Notificar Resultado -->
+        <section id="notificar-resultado">
+            <form id="form-notificar-resultado">
+                <h2>Notificar Resultado de la Evaluación</h2>
+
+                <!-- Campo: Nombre del Proyecto -->
+                <label for="nombre-proyecto">Nombre del Proyecto</label>
+                <input type="text" id="nombre-proyecto" placeholder="Nombre del Proyecto" required>
+
+                <!-- Campo: Estado del Proyecto -->
+                <label for="estado-proyecto">Estado del Proyecto</label>
+                <select id="estado-proyecto" required>
+                    <option value="aprobado">Aprobado</option>
+                    <option value="rechazado">Rechazado</option>
+                </select>
+
+                <!-- Campo: Comentarios sobre el Proyecto -->
+                <label for="comentarios">Comentarios sobre el Proyecto</label>
+                <textarea id="comentarios" placeholder="Comentarios adicionales sobre el proyecto" rows="5" required></textarea>
+
+                <!-- Campo: Notificación -->
+                <label for="notificacion">Notificación al Proponente</label>
+                <textarea id="notificacion" placeholder="Detalles y próximos pasos para el proponente" rows="5" required></textarea>
+
+                <!-- Botón para Notificar Resultado -->
+                <input type="submit" class="btn-1" value="Notificar Resultado">
+            </form>
+
+            <!-- Mensaje de Éxito -->
+            <div id="mensaje-notificacion" style="display:none; text-align: center; color: green;">
+                <h3>Resultado Notificado Correctamente</h3>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

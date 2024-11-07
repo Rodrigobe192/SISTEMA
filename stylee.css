@@ -1,0 +1,99 @@
+/* Estilos para el mensaje flotante */
+.mensaje-exito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+    border-radius: 5px;
+}
+
+/* Estilo general para el cuerpo y el fondo */
+body {
+    font-family: Helvetica Neue, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('desktop-wallpaper-backgrounds-for-login-page-login-page.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Formulario de cambio de contraseña */
+form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: #EEEEEE;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #2E2E2E;
+    margin-bottom: 25px;
+}
+
+label, p {
+    font-size: 17px;
+    color: #575757;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 17px 11px;
+    border: 1px solid #00ADEF;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    background-color: #FAFAFC;
+    outline: none;
+    color: black; /* Cambiar el color del texto a negro */
+    font-size: 17px;
+}
+
+/* Estilo del botón de enviar */
+.btn-1 {
+    background-color: #00ADEF;
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-1:hover {
+    background-color: #04b8ff;
+}
+
+.remember {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+@media(max-width:991px) {
+    body {
+        padding: 30px;
+    }
+
+    form {
+        width: 100px;
+    }
+
+    .remember {
+        flex-direction: column;
+    }
+}

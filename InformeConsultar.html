@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Informes de Evaluación</title>
+    <link rel="stylesheet" href="Consultar.css">
+    <script src="Consu.js" defer></script> <!-- Enlazamos el archivo JS -->
+</head>
+<body>
+    <form id="form-consultar-informes">
+        <h2>Consultar Informes de Evaluación</h2>
+
+        <label for="id-proyecto">ID del Proyecto</label>
+        <input type="text" id="id-proyecto" required>
+
+        <label for="tipo-informe">Tipo de Informe</label>
+        <select id="tipo-informe" required>
+            <option value="preliminar">Informe Preliminar</option>
+            <option value="final">Informe Final</option>
+        </select>
+
+        <input type="submit" class="btn-1" value="Consultar Informe">
+    </form>
+
+    <div id="mensaje-exito" style="display:none; text-align: center; color: green; margin-top: 20px;">
+        <h3>Informe Consultado Correctamente</h3>
+    </div>
+
+    <div id="informe-detalles" style="display:none; margin-top: 20px;">
+        <h3>Detalles del Informe</h3>
+        <p id="informe-contenido">Aquí aparecerán los detalles del informe seleccionado.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Proyecto</title>
+    <link rel="stylesheet" href="Estilo20.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <form id="form-registrar-proyecto">
+        <h2>Registrar Proyecto</h2>
+
+        <label for="nombre-proyecto">Nombre del Proyecto</label>
+        <input type="text" id="nombre-proyecto" required>
+
+        <label for="cargar-planos">Cargar Planos</label>
+        <input type="file" id="cargar-planos" required>
+
+        <label for="cargar-estudio-impacto">Cargar Estudio de Impacto</label>
+        <input type="file" id="cargar-estudio-impacto" required>
+
+        <label for="presupuesto-proyecto">Presupuesto del Proyecto</label>
+        <input type="file" id="presupuesto-proyecto" required>
+
+        <input type="submit" class="btn-1" value="Registrar Proyecto">
+    </form>
+
+    <div id="mensaje-exito" style="display:none; text-align: center; color: green; margin-top: 20px;">
+        <h3>Proyecto Registrado Correctamente</h3>
+    </div>
+</body>
+</html>

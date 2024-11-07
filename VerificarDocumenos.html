@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Documentos</title>
+    <link rel="stylesheet" href="Estilo4040.css">
+    <script src="docu.js" defer></script> <!-- Enlazamos el archivo JS -->
+</head>
+<body>
+    <form id="form-verificar-documentos">
+        <h2>Verificar Documentos</h2>
+
+        <label for="nombre-proyecto">Nombre del Proyecto</label>
+        <input type="text" id="nombre-proyecto" required>
+
+        <label for="documentos">Cargar Documentos</label>
+        <input type="file" id="documentos" accept=".pdf,.doc,.docx,.jpg,.png" multiple required>
+
+        <input type="submit" class="btn-1" value="Verificar Documentos">
+    </form>
+
+    <div id="mensaje-exito" style="display:none; text-align: center; color: green; margin-top: 20px;">
+        <h3>Documentos Verificados Correctamente</h3>
+    </div>
+</body>
+</html>

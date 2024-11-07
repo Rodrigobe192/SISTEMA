@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Informe de Evaluación</title>
+    <link rel="stylesheet" href="Informe.css">
+    <script src="Info.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Generar Informe de Evaluación</h1>
+
+        <!-- Formulario para Generar Informe de Evaluación -->
+        <section id="generar-informe">
+            <form id="form-generar-informe">
+                <h2>Generar Informe de Evaluación del Proyecto</h2>
+
+                <!-- Campo: Nombre del Proyecto -->
+                <label for="nombre-proyecto">Nombre del Proyecto</label>
+                <input type="text" id="nombre-proyecto" placeholder="Nombre del Proyecto" required>
+
+                <!-- Campo: Evaluador -->
+                <label for="evaluador">Evaluador</label>
+                <input type="text" id="evaluador" placeholder="Nombre del Evaluador" required>
+
+                <!-- Campo: Urgencia -->
+                <label for="urgencia">Urgencia del Proyecto</label>
+                <select id="urgencia" required>
+                    <option value="alta">Alta</option>
+                    <option value="media">Media</option>
+                    <option value="baja">Baja</option>
+                </select>
+
+                <!-- Campo: Impacto -->
+                <label for="impacto">Impacto del Proyecto</label>
+                <select id="impacto" required>
+                    <option value="alto">Alto</option>
+                    <option value="medio">Medio</option>
+                    <option value="bajo">Bajo</option>
+                </select>
+
+                <!-- Campo: Costo -->
+                <label for="costo">Costo Estimado</label>
+                <input type="text" id="costo" placeholder="Costo Estimado del Proyecto" required>
+
+                <!-- Campo: Comentarios -->
+                <label for="comentarios">Comentarios Adicionales</label>
+                <textarea id="comentarios" placeholder="Comentarios sobre el proyecto" rows="5" required></textarea>
+
+                <!-- Botón para Generar Informe -->
+                <input type="submit" class="btn-1" value="Generar Informe">
+            </form>
+
+            <!-- Mensaje de Éxito -->
+            <div id="mensaje-informe" style="display:none; text-align: center; color: green;">
+                <h3>Informe de Evaluación Generado Correctamente</h3>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
